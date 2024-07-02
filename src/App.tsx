@@ -6,12 +6,14 @@ import "./App.css";
 
 import Main from "./components/Main";
 import AboutMe from "./components/AboutMe";
+import Skills from "./components/Skills";
 
 function App() {
   return (
     <>
       <Main />
       <AboutMe />
+      <Skills />
     </>
   );
 }
