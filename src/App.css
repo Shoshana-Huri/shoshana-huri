@@ -40,3 +40,36 @@
 .read-the-docs {
   color: #888;
 }
+
+/* ************************************************************************* */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.rounded-rectangle {
+  background-color: transparent;
+  border: 1px solid #feece2;
+  border-radius: 70px;
+  padding: 10px;
+  margin: 13px;
+  box-shadow: 0 4px 8px black;
+  transition: "transform 0.3s ease";
+}
+
+.rounded-rectangle:hover {
+  transform: scale(1.1); /* Scale up by 10% on hover */
+}
+
+.projects {
+  transition: "transform 0.3s ease";
+}
+
+.projects:hover {
+  transform: scale(1.1); /* Scale up by 10% on hover */
+}
