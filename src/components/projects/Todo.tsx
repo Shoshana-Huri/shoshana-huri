@@ -41,8 +41,7 @@ const GitHubLink = styled(Link)({
 });
 
 const Todo: React.FC = () => {
-  const githubRepoUrl =
-    "https://github.com/Shoshana-Huri/Shoshana-Huri.github.io";
+  const githubRepoUrl = "https://github.com/Shoshana-Huri/todo-it";
 
   return (
     <Grid
