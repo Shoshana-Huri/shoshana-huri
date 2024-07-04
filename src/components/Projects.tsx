@@ -1,43 +1,38 @@
-import React from "react";
-import { styled } from "@mui/system";
-import { Grid } from "@mui/material";
-
+import { Box, Typography, useTheme } from "@mui/material";
 import Todo from "./projects/Todo";
 import WatchDog from "./projects/WatchDog";
 
-const ProjectsContainer = styled("div")({
-  backgroundColor: "#F7DED0",
-  color: "black",
-  textAlign: "center",
-  padding: "50px 20px",
-});
-
-const ProjectsGrid = styled(Grid)({
-  display: "flex",
-  justifyContent: "space-around", // Ensures items are evenly spaced
-  gap: "20px", // Adjust the gap between items
-  flexWrap: "wrap", // Allows items to wrap to the next line if needed
-});
-
-const Projects: React.FC = () => {
+export default function Projects() {
+  const theme = useTheme();
   return (
-    <ProjectsContainer>
-      <h1
-        style={{
-          margin: "auto",
-          color: "black",
-          marginBottom: "revert",
-        }}
-      >
-        Projects
-      </h1>
+    <Box
+      component="main"
+      sx={{
+        flexGrow: 1,
+        p: 3,
+        marginLeft: {
+          sm: `calc(${theme.spacing(8)} + 1px)`,
+          md: `calc(${theme.spacing(9)} + 1px)`,
+        },
+        transition: theme.transitions.create("margin", {
+          easing: theme.transitions.easing.sharp,
+          duration: theme.transitions.duration.leavingScreen,
+        }),
+        display: "flex",
+        flexDirection: "column",
+        gap: "20px", // Adjust as needed
+      }}
+    >
+      <Typography variant="h1" style={{ marginTop: "revert" }}>
+        Projects:
+      </Typography>
 
-      <ProjectsGrid container>
+      <Box className="box-border-styling">
         <Todo></Todo>
+      </Box>
+      <Box className="box-border-styling">
         <WatchDog></WatchDog>
-      </ProjectsGrid>
-    </ProjectsContainer>
+      </Box>
+    </Box>
   );
-};
-
-export default Projects;
+}

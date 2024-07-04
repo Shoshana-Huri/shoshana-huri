@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 import theme from "./theme";
 import "./App.css";
 
-import NavBar from "./new-components/NavBar";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (

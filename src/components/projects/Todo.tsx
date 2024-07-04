@@ -1,24 +1,9 @@
 import React from "react";
-import { styled } from "@mui/system";
-import { Grid, Link } from "@mui/material";
+import { Grid, Typography, Link, Box } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import { styled } from "@mui/system";
 
 import TodoImage from "../../assets/todo-app/main.jpg";
-
-const ProjectTitle = styled("h2")({
-  color: "black",
-  width: "10em",
-  textAlign: "center",
-  marginBottom: "auto",
-});
-
-const ProjectContent = styled("div")({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  gap: "10px",
-  marginTop: "10px",
-});
 
 const ImageContainer = styled("div")({
   position: "relative",
@@ -47,36 +32,67 @@ const Todo: React.FC = () => {
     <Grid
       item
       xs={4}
-      style={{
+      sx={{
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        "& .projects": {
+          maxWidth: "371px", // Adjust as needed
+        },
       }}
-      className="projects"
     >
       <ImageContainer>
-        <ProjectImage src={TodoImage} alt="Project Photo" />
+        <ProjectImage
+          src={TodoImage}
+          alt="Project Photo"
+          className="projects"
+        />
         <GitHubLink
           href={githubRepoUrl}
           target="_blank"
           rel="noopener noreferrer"
         >
-          {" "}
-          <GitHubIcon style={{ fontSize: 32 }} />
+          <GitHubIcon
+            className="projects"
+            sx={{ fontSize: 32, color: "black" }}
+          />
         </GitHubLink>
       </ImageContainer>
 
-      <ProjectTitle>Todo's App</ProjectTitle>
-      <ProjectContent>
+      <Typography
+        variant="h3"
+        sx={{
+          color: "black",
+          width: "10em",
+          textAlign: "center",
+          marginBottom: "auto",
+        }}
+      >
+        Todo's App
+      </Typography>
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "10px",
+          marginTop: "10px",
+        }}
+      >
         <div>
-          This app helps users manage tasks efficiently with a calendar that
-          highlights relevant tasks daily and a pie chart summarizing task
-          completion status. It includes a user menu for profile management and
-          mood expression, along with sign-in/sign-out options for convenience.
-          <h4>Tech Stack:</h4>
-          <div>React, MUI, JavaScript</div>
+          <Typography variant="body1">
+            This app helps users manage tasks efficiently with a calendar that
+            highlights relevant tasks daily and a pie chart summarizing task
+            completion status. It includes a user menu for profile management
+            and mood expression, along with sign-in/sign-out options for
+            convenience.
+          </Typography>
+          <Typography variant="h5" sx={{ marginTop: 2 }}>
+            Tech Stack:
+          </Typography>
+          <Typography variant="body1">React, MUI, JavaScript</Typography>
         </div>
-      </ProjectContent>
+      </Box>
     </Grid>
   );
 };

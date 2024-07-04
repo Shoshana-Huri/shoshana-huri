@@ -1,13 +1,7 @@
 import React from "react";
 import { styled } from "@mui/system";
-import { Grid } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import PetsIcon from "@mui/icons-material/Pets";
-
-const ProjectTitle = styled("h2")({
-  color: "black",
-  width: "10em",
-  textAlign: "center",
-});
 
 const ProjectContent = styled("div")({
   display: "flex",
@@ -17,7 +11,7 @@ const ProjectContent = styled("div")({
   marginTop: "10px",
 });
 
-const Todo: React.FC = () => {
+const WatchDog: React.FC = () => {
   return (
     <Grid
       item
@@ -27,23 +21,26 @@ const Todo: React.FC = () => {
         flexDirection: "column",
         alignItems: "center",
       }}
-      className="projects"
     >
       <PetsIcon style={{ fontSize: "30px" }}></PetsIcon>
-      <ProjectTitle>WatchDog Service</ProjectTitle>
+      <Typography variant="h3">WatchDog Service</Typography>
       <ProjectContent>
-        <div>
+        <Typography variant="body1">
           This watchdog service ensures process reliability by having processes
           monitor and keep each other alive. It uses signals for inter-process
           communication (IPC), employs a multithreaded architecture, and
           resolves synchronization issues with semaphores, ensuring efficient
           and reliable system operation.
-          <h4>Tech Stack:</h4>
-          <div>Signals, Posix Semaphore API, C</div>
-        </div>
+          <Typography variant="h5" sx={{ marginTop: 2 }}>
+            Tech Stack:
+          </Typography>
+          <Typography variant="body1">
+            Signals, Posix Semaphore API, C
+          </Typography>
+        </Typography>
       </ProjectContent>
     </Grid>
   );
 };
 
-export default Todo;
+export default WatchDog;
