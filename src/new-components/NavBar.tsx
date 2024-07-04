@@ -19,6 +19,8 @@ import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import { Link } from "react-router-dom";
 
+import Contact from "../components/Contact";
+
 const drawerWidth = 240;
 
 const Content = styled("main", {
@@ -147,6 +149,7 @@ export default function PersistentDrawerLeft(props: PersistentDrawerLeftProps) {
         </List>
       </Drawer>
       <Content open={open}>{props.children}</Content>
+      <Contact />
     </Box>
   );
 }
