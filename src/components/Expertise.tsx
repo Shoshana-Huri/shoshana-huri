@@ -23,7 +23,7 @@ export default function Expertise() {
         gap: "20px", // Adjust as needed
       }}
     >
-      <Typography variant="h1" style={{ marginTop: "revert" }}>
+      <Typography variant="h3" style={{ marginTop: "revert" }}>
         Expertise:
       </Typography>
       <Box sx={{ display: "flex", gap: "20px" }}>
@@ -39,13 +39,13 @@ export default function Expertise() {
           { headline: "Data Bases:", content: "MongoDB, PostgreSQL, MySQL" },
         ].map(({ headline, content }, index) => (
           <Box key={index} className="box-border-styling">
-            <Typography variant="h4" style={{ textDecoration: "underline" }}>
+            <Typography variant="h5" style={{ textDecoration: "underline" }}>
               {headline}
             </Typography>
             <ul>
               {content.split(",").map((item, idx) => (
                 <li key={idx}>
-                  <Typography variant="h5">{item.trim()}</Typography>
+                  <Typography variant="h6">{item.trim()}</Typography>
                 </li>
               ))}
             </ul>

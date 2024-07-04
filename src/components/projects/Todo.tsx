@@ -60,7 +60,7 @@ const Todo: React.FC = () => {
       </ImageContainer>
 
       <Typography
-        variant="h3"
+        variant="h4"
         sx={{
           color: "black",
           width: "10em",

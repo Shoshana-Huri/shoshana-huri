@@ -23,7 +23,7 @@ export default function About() {
         gap: "20px", // Adjust as needed
       }}
     >
-      <Typography variant="h1" style={{ marginTop: "revert" }}>
+      <Typography variant="h3" style={{ marginTop: "revert" }}>
         Who Am I
       </Typography>
       <Box sx={{ display: "flex", gap: "20px" }}>
@@ -49,10 +49,10 @@ interface CustomBoxProps {
 const CustomBox: React.FC<CustomBoxProps> = ({ headline, content }) => {
   return (
     <Box className="box-border-styling">
-      <Typography variant="h4" style={{ textDecoration: "underline" }}>
+      <Typography variant="h5" style={{ textDecoration: "underline" }}>
         {headline}
       </Typography>
-      <Typography variant="h5">{content}</Typography>
+      <Typography variant="h6">{content}</Typography>
     </Box>
   );
 };

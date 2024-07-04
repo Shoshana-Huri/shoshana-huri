@@ -105,7 +105,7 @@ export default function PersistentDrawerLeft(props: PersistentDrawerLeftProps) {
             <MenuIcon />
           </IconButton>
           {/* <Typography variant="h6" noWrap component="div">
-            Persistent drawer
+            Who Am I
           </Typography> */}
         </Toolbar>
       </AppBar>

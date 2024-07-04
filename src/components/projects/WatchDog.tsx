@@ -23,7 +23,7 @@ const WatchDog: React.FC = () => {
       }}
     >
       <PetsIcon style={{ fontSize: "30px" }}></PetsIcon>
-      <Typography variant="h3">WatchDog Service</Typography>
+      <Typography variant="h4">WatchDog Service</Typography>
       <ProjectContent>
         <Typography variant="body1">
           This watchdog service ensures process reliability by having processes

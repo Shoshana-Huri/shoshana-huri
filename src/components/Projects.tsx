@@ -23,7 +23,7 @@ export default function Projects() {
         gap: "20px", // Adjust as needed
       }}
     >
-      <Typography variant="h1" style={{ marginTop: "revert" }}>
+      <Typography variant="h3" style={{ marginTop: "revert" }}>
         Projects:
       </Typography>
 
